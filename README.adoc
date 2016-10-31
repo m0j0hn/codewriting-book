@@ -9,10 +9,10 @@ This is an open, collaborative writing project to document current best practice
 . Clone this repo.
 +
 ----
-git clone http://github.com/briandominick/codewriter-book.git
+git clone https://github.com/briandominick/codewriting-book.git
 ----
 
-. `cd codewriter-book`
+. `cd codewriting-book`
 
 . `asciidoctor -d book index.adoc`
 

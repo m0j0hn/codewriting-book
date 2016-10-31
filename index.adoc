@@ -1,5 +1,4 @@
 = Code Writing: Documentation Ops for Agile Teams & Technical Writers
-
 Brian Dominick <badominick@gmail.com>
 :includesdir: ./includes
 
@@ -30,7 +29,7 @@ The particular language should not matter for most examples, however.
 //INTRODUCTION
 == Introduction: DocOps for Forward Thinking Technical Communications
 
-This project is my attempt to bridge a gap I straddle between the words of writing and software development.
+This project is my attempt to bridge a gap I straddle between the worlds of writing and software development.
 I have spent my career (over two decades) in and out of media and technology, usually mixing the two in some way, if not as my primary objective.
 
 What differentiates _Code Writing_ from other technical writing books is that it is solidly rooted in how today's best engineering teams operate.

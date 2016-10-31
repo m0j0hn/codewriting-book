@@ -1,4 +1,4 @@
-= Code Writing: Documentation Ops for Agile Teams & Bleeding Edge Technical Writers
+= Code Writing: Documentation Ops for Agile Teams & Technical Writers
 
 Brian Dominick <badominick@gmail.com>
 :includesdir: ./includes

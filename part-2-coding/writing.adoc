@@ -1,0 +1,11 @@
+= Part One: Writing
+
+[partintro]
+--
+No matter what else you learn or forget about technical writing, remember everything you learn about _writing_.
+The rest changes a lot.
+Documentation workflows and methodologies, platforms and toolchains--all the stuff you need proficiency in to call yourself a technical writer matters not at all if you cannot write complete, accessible product explanations and instructions.
+
+The chapters in this section address the craft of writing about software products.
+The rest of the noise of the field can wait; the one thing we all have in common is a love of language, so there we'll start.
+--

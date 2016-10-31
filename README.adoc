@@ -1,0 +1,19 @@
+= Code Writing: DocOps/Technical Writing Book
+
+This is an open, collaborative writing project to document current best practices and forward thinking in the field of technical communications, specifically documentation for software projects.
+
+== Build
+
+. https://github.com/asciidoctor/asciidoctor#installation[Install Asciidoctor].
+
+. Clone this repo.
++
+----
+git clone http://github.com/briandominick/codewriter-book.git
+----
+
+. `cd codewriter-book`
+
+. `asciidoctor -d book index.adoc`
+
+. Open `index.html` in your preferred browser.

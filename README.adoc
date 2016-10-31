@@ -5,7 +5,7 @@ This is an open, collaborative writing project to document current best practice
 == Build
 
 This book is being written in AsciiDoc.
-That means it starts as source code in `.adoc`-appended files, and it must be compiled to a more readable format.
+That means it starts as source code (in `.adoc`-appended files), and it must be compiled to a more readable format.
 
 Here is how to build a 1-page HTML document from the source, so you can read it in a proper format:
 
@@ -19,9 +19,21 @@ git clone https://github.com/briandominick/codewriting-book.git
 
 . `cd codewriting-book`
 
-. `asciidoctor -d book index.adoc`
+. Build the book in PDF or HTML.
 
-. Open `index.html` in your preferred browser.
+.. For an HTML build:
+
+... `asciidoctor -d book index.adoc`
+
+... Open `index.html` in your preferred browser.
+
+.. For a PDF build (recommended):
+
+... http://asciidoctor.org/docs/convert-asciidoc-to-pdf/#getting-started[Install asciidoctor-pdf].
+
+... `asciidoctor -r asciidoctor-pdf -b pdf -d book index.adoc`
+
+... Open `index.pdf` in your favorite PDF viewer.
 
 == Contribute
 

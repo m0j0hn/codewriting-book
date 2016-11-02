@@ -1,0 +1,6 @@
+= Collaborative Authorship & Lean Publishing
+
+This book is an experiment.
+
+This book is being developed kind of like a software product, using the approach introduced by Peter Armstrong in https://leanpub.com/lean[_Lean Publishing_].
+If you wish to contribute to this book, I strongly recommend you make a donation to Peter's project and at least skim his excellent book.

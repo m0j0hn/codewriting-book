@@ -1,0 +1,4 @@
+= Strategic Content
+[abstract]
+Use metrics to demonstrate the value of good documentation.
+Show your reduced impact on SMEs' time, as well as improved output.

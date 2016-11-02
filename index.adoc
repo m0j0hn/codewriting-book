@@ -1,379 +1,129 @@
-= Code Writing: Documentation Ops for Agile Teams & Technical Writers
+= Code Writing: DocOps for Agile Teams & Tech Writers
 Brian Dominick <badominick@gmail.com>
 :includesdir: ./includes
 
-== Preface: A Note to Readers & Contributors
+:toc: macro
+toc::[]
 
-=== Collaborative Authoring
 
-This book is a living document being written on a public GitHub repository.
-You are welcome and encouraged to contribute by forking the repo, contributing edits, and issuing a pull request (PR).
-For detailed instructions, see <<appendix-contributing>>.
+//FRONT MATTER
 
-Be sure to add your name to the contributors list with your PR!
 
-=== Engaged Learning
 
-As a technical writer, I like to use examples.
-I also happen to learn best from examples.
-Most importantly, I learn best by following along.
+[[preface]]
+[preface]
+include::./preface.adoc[leveloffset=1]
 
-For these reasons, a narrative structure will be threaded throughout the book, and you are encouraged to play along.
-All the tools you will need are introduced as they are called for.
-Every tool used in these instructions will be free and open source software.
-Examples in this book heavily favor AsciiDoc markup language, though I have used Markdown and reStructuredText occasionally as well.
-The particular language should not matter for most examples, however.
+[[introduction]]
+include::./introduction.adoc[leveloffset=1]
 
-=== Creative Commons License
 
-//INTRODUCTION
-== Introduction: DocOps for Forward Thinking Technical Communications
+//PART ONE: WRITING
+[[part-1-writing]]
+include::./part-1-writing/writing.adoc[]
 
-This project is my attempt to bridge a gap I straddle between the worlds of writing and software development.
-I have spent my career (over two decades) in and out of media and technology, usually mixing the two in some way, if not as my primary objective.
+[[code-writing]]
+include::./part-1-writing/code-writing.adoc[leveloffset=1]
 
-What differentiates _Code Writing_ from other technical writing books is that it is solidly rooted in how today's best engineering teams operate.
-The wisdom of technical writers, documentation managers, and project managers from lean/agile organizations is infused into this new approach.
+[[audience-strategy]]
+include::./part-1-writing/audience-strategy.adoc[leveloffset=1]
 
-DocOps parallels the field of "DevOps" (developer operations, engineers who specialize in making other engineers' work easier and more effective through tooling and automation).
-DocOps means hacking platforms to enable tech writers to be better at their jobs.
-To some extent this means better tooling, but it also means sensible collaboration and contribution policies, as well as a stable, predictable, and efficient workflow.
+[[style-approach]]
+include::./part-1-writing/style-approach.adoc[leveloffset=1]
 
-=== Objectives
+[[documentation-anatomy]]
+include::./part-1-writing/documentation-anatomy.adoc[leveloffset=1]
 
-After reading this book and engaging its exercises, you should be better able to
+[[overinstruct-everything]]
+include::./part-1-writing/overinstruct-everything.adoc[leveloffset=1]
 
-* _describe software_ to users and _instruct_ them in its use;
 
-* _support engineers_ in communicating their product to its users;
+//PART TWO: CODING
+[[part-2-coding]]
+include::./part-2-coding/coding.adoc[]
 
-* _establish systems_ for collaborative documentation using bleeding-edge open source tools and platforms;
-
-* _integrate documentation_ into product development… and the product itself;
-
-* _coordinate contributions_ from a agile developers in ways that complement rather than interfering with their preferred workflows;
-
-* _convert legacy material_ to a future-compatible system; and
-
-* _‘codify’ your technical writing_ by thinking like an engineer.
-
-Truth be told, I am researching and writing this book so I can be a better technical writer.
-I believe the exercise of writing this book will improve my skills in all of the above categories, as well.
-I hope if you follow along with my experiment, you will learn with me.
-If you are moved to contribute and teach me directly, I will be grateful beyond words.
-
-
-=== Open Source
-I love open source.
-I love it in principle, and I love it in practice.
-Open source software gives us collaborative power commercial software will never permit.
-My pro-open-source bias will be on display throughout, so I thought I'd take a second to _prefend_ it.
-
-[TIP]
-The author makes up a lot of words.
-He rarely explains them, instead expecting his audience to infer their meaning from context and root words.
-Apologies are offered in advance.
-
-Allow me to briefly overwhelm you with reasons we should all use as much open source software as possible.
-
-Open source means access::
-  When we use and support open source tools, we increase access to them for people with less means.
-
-Open source means power::
-  Inequitable distribution of power and inflexible hierarchies and workflows are hugely restricting factors.
-  Fast-paced engineering teams have no room for externally imposed limitations.
-  Like DevOps, DocOps needs
-
-Open source means transparency::
-  By definition, open source gives more people a view into our work.
-  Transparency is good for accountability.
-  Even if the audience that is getting a window into your work is relatively private (for instance, your engineering team), the point is to keep your technical writing copy in a repo others have access to. (More on this reasoning in )
-
-Open source means speed::
-
-Open source means security::
-  I think the ancient myth that exposing your source code makes you vulnerable has been successfully debunked by now.
-
-The most important reason you should favor and engage with open source solutions is that most of the best engineers are open source enthusiasts, if not devotees.
-Not only does this suggest there is something to the phenomenon, but it means you'll need to appreciate and get comfortable with open source if you want to earn the respect of the most discerning engineers you may work with.
-
-=== Platform Thinking
-
-Platforms mean _distributed power_, and distributed power is key to comprehensive documentation, especially in agile environments.
-If you want to be successful in producing documentation for ever-changing software products, you'll need a platform solution.
-This book will help you think through the various options, including hybrid platforms that will scratch various itches coherently with a little finessing up front.
-
-=== "Everything in Code"
-
-This maxim, "everything in code", has a dual meaning.
-First, all technical writing should be written in markup, not using an abstraction tool such as a WYSIWYG editor.
-The case for this is developed in <<writing-in-code>>.
-
-Second, put the docs in the product codebase.
-We'll discuss iteratively integrating your documentation source and platform into the repo and the product itself.
-This is addressed in
-
-=== Lean Docs for Lean Projects
-
-Documentation can be as lean and agile as any product code, even if it inherently lags behind in realtime, at least somewhat.
-The truth is, unless you are somehow afforded miraculous amounts of time to document your product, it is likely that you will need to iterate from a "minimum viable product" for your user manual or other documentation.
-
-=== DocuMator: Your New Startup, Day One
-
-You're excused for feeling intimidated your first day at DocuMator, the fledgling startup gearing up to soft-launch its eponymous product: a cloud platform for collaboratively writing and publishing product documentation.
-Congratulations: you're going to be documenting a product the main users of which are professional tech writers.
-
-Because docs are beyond critical to this product, DocuMator brought you on relatively early.
-The engineering team is only five strong when you join, including the CTO/head engineer, three developers, and a DevOps specialist who will help you integrate your tools with the available infrastructure, which you are not expected to be completely familiar.
-
-==== What is DocuMator?
-
-On Day One, Shanda Abrams, the Chief Technical Officer and co-founder, reiterates the DocuMator elevator pitch she gave you during your interview.
-"DocuMator is a Git-backed content-management system for product documentation.
-It looks and feels like a CMS such as WordPress or Drupal, but it uses a flat-file backend and "
-
-Your job, Shanda tells you, is to document their product while establishing the ideal documentation platform and workflow for the soon-to-be-growing engineering team.
-There is talk of eventually hiring more tech writers.
-"But for at least six months," Shanda says, "you should expect to be it."
-
-Here are the milestones you have agreed to achieve.
-
-. Produce a 1-page HTML user guide to the minimum viable product.
-+
-This will include:
-
-* account creation
-* logging in and out
-* creating documents
-* publishing content
-* managing projects
-* various other features
-+
-include::{includesdir}/deadline-table.adoc[deadline="30 days",objective="1-page HTML User Guide"]
-
-. Choose a source markup language for your primary writing.
-+
-This challenge will include your first interrogative.
-You will choose between:
-
-* Markdown
-* AsciiDoc
-* reStructuredText
-* DITA
-
-. Set up a simple system for sensible, collaborative internal documentation.
-+
-This will include the second interrogative, which is arguably also the toughest.
-You will choose between:
-
-* a cloud portal/intranet/filesystem
-* a web-based content management system (CMS)
-* a wiki
-* flat files in Git
-* a hybrid solution
-
-. Set up an integrated "changelog" for DocuMator.
-+
-This means:
-
-* working with the developers to track the user-facing changes they make;
-* copy editing and formatting their notes into presentable shape;
-* integrating this source material into the documentation; and
-* making sure all release notes appear where and when they should.
-
-. Produce installation instructions for DocuMator Enterprise, the self-serve version of the SaaS product.
-
-.. Test and write up the installation procedure.
-+
-You're old hat now, so writing up these instructions won't be a big deal.
-However, you'll want to reevaluate your approach given each new project's requirements.
-And in this case, you'll need to approach the source-info gathering process differently, since you're instructing
-
-* installation (not use)
-* to a different audience
-* for a different environment.
-
-.. Publish the DocuMator Enterprise installation guide in and HTML and PDF.
-+
-This won't be a difficult objective, but knowing it is down the pike will inform prerequisite decisions.
-
-. Prepare to hire a second tech writer.
-+
-This will mean taking some time to evaluate your documentation infrastructure.
-Is it ready to accommodate a newcomer?
-What is missing?
-How can you make it so they'll orientate and contribute rapidly?
-
-//PART ONE
-include::part-1-writing/writing.adoc[]
-
-//chapter: code writing
-== Code Writing
-[abstract]
-The art of writing in code about code.
-
-//chapter: audience & strategy
-== Audience and Strategy
-[abstract]
-You'll never know how to reach your audience if you don't first get to know their challenges the way product developers do.
-
-//chapter: style & approach
-== Style and Approach
-[abstract]
-You don't have the luxury of being able to write docs in 3 styles and let users pick, so you pick for them.
-
-//chapter: documentation anatomy
-== Documentation Anatomy
-[abstract]
-A lot more goes into good user docs than clear instructions and illustrative screenies.
-
-//PART TWO
-= Part Two: Coding
-
-//chapter: writing (in) code
 [[writing-in-code]]
-== Writing (in) Code
-[abstract]
-Writing docs in dynamic markup, inside the product repo, using developers' tools.
+include::./part-2-coding/writing-in-code.adoc[leveloffset=1]
 
-=== Writing in Lightweight Markup
+[[engineering-documentation]]
+include::./part-2-coding/engineering-documentation.adoc[leveloffset=1]
 
-=== Docs in the Codebase
+[[product-documentation]]
+include::./part-2-coding/product-documentation.adoc[leveloffset=1]
 
-=== Writing DRY Docs
-
-=== Iterate the Dynamism of Your Docs
-
-//chapter: engineering docs
-== Engineering Documentation
-[abstract]
-Think early about accommodating the engineering team's ever-growing need for notes, specs, guides, registries, and so much more non-user-facing docs.
-
-Engineering departments need loads of internal documentation.
-The best platform for your internal docs integrates nicely with your product docs.
-This starts with empowering your whole team to use a language and platform that will be easy to learn and completely effective.
-
-=== Style Guides
-
-=== Workflow Guides
-
-=== Reference Registries
-
-=== Drafting Capabilities
-
-=== Knowledge Bases and Inter-team Sharing
-
-//chapter: product docs
-== Product Documentation
-[abstract]
-Your team's product has a "build" process, and your docs should be an integral part of it.
-
-//chapter: developer integration
 [[developer-integration]]
-== Developer Integration
-[abstract]
-Getting your engineers involved in directly documenting the project can be a big win, so long as you avoid the pitfalls and maintain order.
+include::./part-2-coding/developer-integration.adoc[leveloffset=1]
 
-=== Getting Engineers to Write Docs
+[[instructions-testing]]
+include::./part-2-coding/instructions-testing.adoc[leveloffset=1]
 
-=== The Balance
-
-==== Too Many Cooks in the Kitchen
 
 //PART THREE: PUBLISHING
-= Part Three: Publishing
+[[part-3-publishing]]
+include::./part-3-publishing/publishing.adoc[]
 
-//chapter: docs hacking
 [[docs-hacking]]
-== Docs Hacking
-[abstract]
-Establishing a mature, flexible toolchain that suits current and future needs.
+include::./part-3-publishing/docs-hacking.adoc[leveloffset=1]
 
-Getting your docs out the right way is always a matter of cobbling together the right toolchain, with a document structure and workflow that are "right enough" for the current problem with the existing team.
+[[audience-delivery]]
+include::./part-3-publishing/audience-delivery.adoc[leveloffset=1]
 
-//chapter: platforms ftw
-== Platforms FTW
-[abstract]
-Your ideal solution empowers your team, so get comfortable with platform thinking.
+[[documentation-systems]]
+include::./part-3-publishing/documentation-systems.adoc[leveloffset=1]
 
-//chapter: audience and delivery
-== Audience and Delivery
-[abstract]
-Evaluate whether and how well you are reaching your audience.
-
-=== User Testing
-
-=== Analytics
-
-//chapter: documentation systems
-== Documentation Systems
-[abstract]
-Some of the options that are essentially ready out of the box or with some clever configuration.
-
-=== A Note on Content Management
-
-=== Docbook Toolchains
-
-=== Asciidoctor Toolchains
-
-=== Sphinx Toolchain
-
-=== DITA Toolchains
-
-//chapter: true docops
-== True DocOps
-[abstract]
-Making yourself useful to Product and Engineering by always being ready to solve a documentation problem (even imperfectly).
-
-=== Solving Problems
-
-=== Driving Results
-
-=== Leading Content
-
-=== Agility at Work
 
 //PART FOUR: MANAGING
-= Part Four: Managing
+[[part-4-managing]]
+include::./part-4-managing/managing.adoc[]
 
-//chapter: workflow & collaboration
-== Workflow & Collaboration
-[abstract]
-Working with engineers and fellow tech writers to ship complete, accurate, useful, and engaging docs every time.
+[[workflow-collaboration]]
+include::./part-4-managing/workflow-collaboration.adoc[leveloffset=1]
 
-//chapter: content management
-== Content Management
-[abstract]
-Grappling with version control and localization as products/features mature, fork, internationalize, and deprecate.
+[[content-management]]
+include::./part-4-managing/content-management.adoc[leveloffset=1]
 
-=== Version Entropy
+[[team-leadership]]
+include::./part-4-managing/team-leadership.adoc[leveloffset=1]
 
-=== Feature Status Tracking
+[[scaling-strategies]]
+include::./part-4-managing/scaling-strategies.adoc[leveloffset=1]
 
-=== Localization
 
-=== Content Integration
+//PART FIVE: EVOLVING
+[[part-5-evolving]]
+include::./part-5-evolving/evolving.adoc[]
 
-The holy grail of DocOps is to enable documentation of a complex product using a single source base, without duplicate source content, while outputting in any and all necessary formats.
-This is much easier said than achieved, and probably none of us accomplishes it with purity, but striving for a pristinely principled DocOps environment is ideal, all else being equal.
+[[strategic-content]]
+include::./part-5-evolving/strategic-content.adoc[leveloffset=1]
 
-//chapter: team management
-== Team Management
-[abstract]
-Coordinating and sharing responsibilities among tech writers.
+[[memes-messages]]
+include::./part-5-evolving/strategic-content.adoc[leveloffset=1]
 
-//chapter: scaling strategies
-== Scaling Strategies
-[abstract]
-Using extensible publishing and delivery technologies to accommodate the growth of your organization, the quantity and maturity of your products, and the hopefully diversifying user base that makes up your audience.
+[[open-source]]
+include::./part-5-evolving/open-source.adoc[leveloffset=1]
 
+
+//APPENDICES
+[appendix]
+[[bibliography]]
+include::./appendices/bibliography.adoc[leveloffset=1]
+
+[[glossary]]
+[glossary]
+include::./appendices/glossary.adoc[leveloffset=1]
 
 [appendix]
-== Bibliography
-[bibliography]
-- [[[modern]]] Andrew Etter. Modern Technical Writing: An Introduction to Software Documentation, Kindle Edition. Self-published. 2016.
+[[authorship-publishing]]
+include::./appendices/authorship-publishing.adoc[leveloffset=1]
 
-
-//appendix: collaborative authorship
 [appendix]
-== Collaborative Authorship
+[[style-guide]]
+include::./appendices/style-guide.adoc[leveloffset=1]
+
+[appendix]
+[[creative-commons-license]]
+= Creative Commons License
+
+[appendix]
+[[codebase-licensing-notice]]
+= Codebase Licensing NOTICE

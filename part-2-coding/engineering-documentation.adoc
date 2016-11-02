@@ -1,0 +1,102 @@
+= Engineering Documentation
+[abstract]
+Think early (and often) about the engineering team's ever-growing need for notes, specs, guides, registries (and so much more) non-user-facing docs.
+
+Engineering departments need loads of internal documentation.
+The best platform for your internal docs integrates nicely with your product docs.
+This starts with empowering your whole team to use a language and platform that will be easy to learn and completely effective.
+
+== Docs Maturation Process
+
+Ideally, every internal doc should eventually give way to a user-facing doc.
+
+[WARNING]
+Rant ahead in 3… 2… 1…
+
+Even with its many qualifiers, I realize that is a bold statement, so let's take a moment to explore.
+I definitely do not mean that every internal document will become a user-facing document.
+(What a nightmare.)
+But if it was worth creating in the first place, a technical document will eventually at least inform something in the product.
+And if it's in the product and your team at least aims to do software right, eventually everything that goes in will be exposed to some outsider at some point.
+
+[.didyouknow]
+[NOTE]
+.It's like that, and that's the way it is
+--
+A full-fledged internal-to-external process is called a _recursive unilateral document maturation cycle_, or RUnDMC.
+--
+
+I realize this may not be an intuitive concept, but it is important.
+We record institutional knowledge so that we can perform our jobs better inside that work environment.
+But with software products--unlike nearly anything else one can produce--the value of ingredients often lasts beyond the current instance of this product.
+New versions will be built on the same matter as the first, over and over and over again.
+
+Moreover, software is made to allow its insides to be exposed.
+Think of a good API.
+Nowadays, good web development revolves around APIs, including for proprietary/private parts of the company's own product (such as the UI) that interact with core/common parts of the product.
+Good development technique means interacting with your product the way you want third-party developers to.
+This can and should lead to the slow release of hidden parts of the product, as their utility to outsider users begins to catch up with that found by core developers.
+Private tools get open-sourced or otherwise released.
+Cookbooks and test results make their way to users.
+
+This is all great news.
+All else being in order--including good organization, indexing, and delivery systems--more released product documentation is almost always better.
+
+That means imbuing internal docs with an extra round of integrity during creation, editing, and upkeep may edge them that much closer to release.
+Imagine all those notes taken during hours of rigorous performance testing, workarounds and patches that never made release, sample files used in development, responses to one-off inquiries from Sales and Marketing.
+
+[TIP]
+.Releasing work product can be rewarding.
+--
+If it doesn't require a much extra effort, selectively releasing "work product" can be a rewarding experience for many developers and support staff.
+Even when just as uncredited as their source code contributions, developers like to see the fruit of their work get exposed and potentially make a difference to someone.
+
+This goes for nearly everyone at any company, all the way to the remote contractor--everybody wants to impact customers.
+Look to team members you don't work with as often, such as QA testers, automation and DevOps specialists, project managers.
+Anyone who has information that might help users succeed with or extend the product is a potential source.
+
+--
+
+If you've encouraged DocOps best practices for internal documentation, lots of internal content should be one edit and review away from releasability.
+
+`</rant>`
+
+=== For God's Sake, Don't Release It All!
+
+All the above being said, for the love of all that remains unspoilt on this forsaken ball of crusted molten matter, be judicious in what you release.
+Once a document is out there, it's essentially impossible to fully recall.
+
+*Release only what you can and will update.*
+Keeping track of all released documentation means _having a system in place_.
+If you do this right, the amount of released material could grow exponentially, with a consistent flow between internal drafts to inclusion in released artifacts.
+
+Make no mistake, however; getting this wrong can mean orphaned documents all over the Web and, worst of all… _onto users' hard drives_.
+To some extent, this is just what we deal with;
+often the best we can do is keep every released document updated and readily available to users.
+
+The key is to make it easy to find their way to the right docs as soon as they figure out they don't have the best version available.
+
+[TIP]
+.Docs should enable verification of currentness
+Every released artifact should have prominently embedded in it a phone-home URL.
+Make it something short and sweet that will quickly provide assurance that the user has access to the latest version of the information, in whatever form that takes at the moment.
+
+[.section.conclusion]
+--
+* For advanced attention to managing "version entropy" in product docs, see <<keeping-track>>.
+
+* We address <<internal-version-control>> later in this chapter.
+--
+
+== Style Guides & Conventions
+
+== Workflow Guides
+
+== Reference Registries
+
+== Drafting Capabilities
+
+== Knowledge Bases and Inter-team Sharing
+
+[[internal-version-control]]
+== Version Control & Deprecation in Internal Docs

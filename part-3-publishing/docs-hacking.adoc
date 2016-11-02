@@ -1,0 +1,7 @@
+= Docs Hacking
+[abstract]
+Establishing a mature, flexible toolchain that suits current and future needs.
+
+Getting your docs out the right way is always a matter of cobbling together the right toolchain, with a document structure and workflow that are "right enough" for the current problem with the existing team.
+
+== Platforms FTW!

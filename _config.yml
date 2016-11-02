@@ -1,0 +1,3 @@
+output: text
+source: data
+destination: _output

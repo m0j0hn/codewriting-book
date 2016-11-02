@@ -1,0 +1,21 @@
+bibliography:
+  - slug: modern
+    title: Modern Technical Writing: An Introduction to Software     Documentation
+    edition: Kindle Edition
+    type: book
+    author:
+      first: Andrew
+      last: Etter
+    publisher: Self
+    year: 2016
+    url:
+  - slug: leanpub
+    title: Lean Publishing
+    edition:
+    type: book
+    author:
+      first: Peter
+      last: Armstrong
+    publisher: Leanpub
+    year: 2016
+    url: http://leanpub.com/lean

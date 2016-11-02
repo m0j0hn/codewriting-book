@@ -1,0 +1,5 @@
+= Documentation Anatomy
+[abstract]
+A lot more goes into good user docs than clear instructions and illustrative screenies.
+
+What documentation do users need?

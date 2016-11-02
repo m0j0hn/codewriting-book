@@ -1,0 +1,3 @@
+= Team Leadership
+[abstract]
+Coordinating and sharing responsibilities among tech writers.

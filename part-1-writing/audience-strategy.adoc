@@ -1,0 +1,5 @@
+= Audience and Strategy
+[abstract]
+You'll never know how to reach your audience if you don't first get to know their challenges the way product developers do.
+
+== Output Implications

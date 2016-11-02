@@ -1,0 +1,16 @@
+= Workflow & Collaboration
+[abstract]
+Working with engineers and fellow tech writers to ship complete, accurate, useful, and engaging docs every time.
+
+== Working with Existing Development Processes
+
+Engineers typically expect technical writers to work around them.
+A
+
+== Molding Processes to Work with Docs
+
+
+
+== Tech Writers Are Not Stenographers
+
+Developers often treat tech writers like personal secretaries.

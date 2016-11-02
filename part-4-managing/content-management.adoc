@@ -1,0 +1,160 @@
+= Content Management
+[abstract]
+Grappling with version control and localization as products/features mature, fork, internationalize, and deprecate.
+
+== Version Entropy
+
+Software and documentation have a natural tendency to diverge.
+Given time, even with consistent attention, more gaps between word and truth appear.
+In fact, if you're a good technical writer, you're too interested in adding great new content to fuss over constantly improving the existing stuff.
+Only a great technical writer sets aside that universal urge and attends to the existing landscape.
+
+Product artifacts in which the code no longer matches the expectations set by docs has suffered what I call _version rot_.
+A sometimes-fatal affliction, version rot is almost always preceded by phases such as _version decay_ and _version wilting_, all due to the tendency of products to undergo _version entropy_ across release cycles.
+
+[NOTE]
+The malady _version lag_, by which documentation merely trails a released version, is a fundamentally different matter.
+That said, they often cohabitate at the same engineering outfits.
+
+This phenomenon can affect SaaS platforms at least as much as it affects installable artifacts, especially given how differently (and poorly) cloud-service operations sometimes handle releases.
+
+[TIP]
+If you are the tech writer for a SaaS shop with only one released, centralized version of one product, congratulations.
+Keep this to yourself at the next meetup, though. would have to be religious
+
+[[keeping-track]]
+=== Keeping Track of Released Material
+
+== Feature Status Tracking
+
+== Localization
+
+== Content Integration
+
+The holy grail of DocOps is to enable documentation of a complex product using a single source base, without duplicate source content, while outputting in any and all necessary formats and languages.
+Probably none of us accomplishes this with purity, but striving for a pristinely principled DocOps environment is ideal, all else being equal.
+
+== Complex Content Objects & Extreme Reuse
+
+Handling what I call complex content objects (CCOs) is one of the biggest challenges faced by a team dealing with lots of discrete, structured content items.
+Truthfully, the main kind of CCO you deal with is every page of content you write in any markup language.
+The markup is structuring a complex content object, even adding metadata of at least some kind (minimally dates such as created and modified).
+
+What I mean by CCOs are all the secondary and tertiary types of content you need to maintain and reuse.
+Besides from pages and their subordinate content objects (such as blocks, links, and so forth), you probably need your documentation solution to handle an array of less-standard CCOs.
+Think of reusable content items such data you're keeping in a spreadsheet right now.
+If it has two or more columns, each row is a CCO, and each spreadsheet is a CCO dataset of sorts.
+
+CCOs are typically at least one step more complex than a parameter (a key-value pair).
+
+.Example -- A parameter (in YAML)
+[source,json]
+----
+{
+  "key-name": "parameter-value"
+}
+----
+
+.Example -- A Complex Content Object or CCO (in YAML)
+[source,json]
+----
+{
+  "key-name": [
+    "another-key": "that value",
+    "second-child-key": 5
+  ]
+}
+----
+
+The best example of a CCO type that I know of is my personal Moby Dick: a means of cataloguing hundreds of configuration properties in a multi-component enterprise IT Ops product.
+Our product is server software--about a dozen distinct daemons that may run on scores of nodes at a massive datacenter.
+Our users can configure all of these services in myriad ways by setting key-value pairs.
+
+Our users need reliable access to accurate documentation of our configuration settings in order to deploy and fine tune our software.
+Let's take a look at a configuration property's components as a YAML.
+As you examine this figure, try to ignore the format and focus on the qualities of the content object.
+
+.A complex content object (CCO) represented in YAML
+[source,yaml ]
+----
+include::../includes/snippets/cco-property.yml[]
+----
+
+Even at a glance, you should be able to appreciate what makes this "complex".
+As we see in the above snippet, a multi-version, multi-environment product could quickly require a relatively complex data structure to track how its configuration parameters relate to the product's various states and forms.
+
+=== Considerations
+
+Consider the following factors when solving a problem like CCO management.
+
+authoring access::
+Is this system going to be someone's sole domain, or is it a crowdsourced effort?
++
+[.scenario]
+****
+In our example of a configuration parameters system, the whole point is to let engineers make necessary edits to the properties documentation source as they make changes to their impact source code.
+****
+
+automation::
+If you are integrated with a build system, it will have implications on your choice of toolchains for this function.
+
+sorting and filtering::
+Will you need to re-sort CCOs by any of their parameter values?
+How about outputting only certain instances of a CCO type in certain places?
+Think again in terms of a spreadsheet; sorting and filtering are key features.
+Consider if you will ever need to re-sort your CCOs for publication (beyond just reformatting each CCO with a template).
+If so, you'll need to be able to effectively query the dataset, which implies more than just parsing/mapping a data dump to your desired output format.
+
+output formats::
+What formats will your CCOs need to get output into?
+
+* HTML
+* Markdown
+* AsciiDoc
+* DITA
+* Docbook
+* LaTeX
+* PDF
+* Man
+* JSON
+* SQL
+
+Your solution will need to be mappable to all the required formats.
+It will need to be able to export to something they can read, or external resources will need access to your CCO solution.
+
+output languages::
+Internationalization support will either require another layer of development skill and effort or a budget for localization CCMS capabilities.
+
+product versioning::
+If by some stroke of genius, your product does not require release version control, you may be able to get away with a conventional CMS backed by a relational database.
+The need to tie complex content with product version makes a flat-file approach seem necessary.
+
+Before we settle on a flat-file approach, let's explicitly consider another option.
+
+=== Relational Databases
+
+If your background is in website development or content management systems, the solution may seem obvious.
+As recently as a couple years ago, I would have solved this with a relational database.
+Structured Query Language is not just a way of inserting, updating, and retrieving data in a relational database;
+it can also express the proper schema of a data object.
+After all, a database table is basically a container for data objects.
+
+The main problem is versioning.
+Source-control systems like Git don't work with relational databases, which tend to use binary files.
+Git has no insight into the structure of your conventional database file, so it cannot track changes made to the data.
+Therefore, an RDB will also require specific version tagging of version-specific data, a layer of manual complexity that is fairly prohibitive.
+
+Another limitation of RDBs is integrating them into your codebase.
+Any open source project can be set up inside your repo, but truly integrating such a product can add extra challenges.
+
+If SQL and an RDB can solve your needs, go for it.
+There is rarely any advantage to adding complexity or setup time to a project without an immediate or near-term need.
+SQL databases are highly portable.
+
+=== DITA CCMSes
+
+It is important to note that DITA's specializations are basically CCOs: XML schemas with enforceable rules.
+
+=== A flat-file solution
+
+Here is how I am solving this problem at Rocana.

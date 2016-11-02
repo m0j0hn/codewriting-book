@@ -1,0 +1,92 @@
+---
+title: Scenario 1: DocuMator, Day One
+type: scenario
+tags: documator, example, exericise, scenario
+description: Your new job as \"Documentation Engineer\" at a SaaS startup fresh out of a much-hyped venture accelerator looks daunting.
+---
+
+You're excused for feeling intimidated your first day at DocuMator, the fledgling startup gearing up to soft-launch its eponymous product: a cloud platform for collaboratively writing and publishing product documentation.
+Congratulations: you're going to be documenting a product the main users of which are professional tech writers.
+
+DocuMator is a hot company, and you're honored to be joining as a key member of the engineering organization--whether everyone on the team knows it or not.
+The good news is that the engineer:tech writer ratio is excellent.
+
+Because docs are beyond critical to this product, DocuMator brought you on relatively early.
+The engineering team is only five strong when you join, including the CTO/head engineer, three developers, and a DevOps specialist who will help you integrate your tools with the available infrastructure, which you are not expected to be completely familiar.
+
+[TIP]
+What is DocuMator?
+
+On Day One, Shanda Abrams, the Chief Technical Officer and co-founder, reiterates the DocuMator elevator pitch she gave you during your interview.
+"DocuMator is a Git-backed content-management system for product documentation.
+It looks and feels like a CMS such as WordPress or Drupal, but it uses a flat-file backend and "
+
+Your job, Shanda tells you, is to document their product while establishing the ideal documentation platform and workflow for the soon-to-be-growing engineering team.
+There is talk of eventually hiring more tech writers.
+"But for at least six months," Shanda says, "you should expect to be it."
+
+Here are the milestones you have agreed to achieve.
+
+. Produce a 1-page HTML user guide to the minimum viable product.
++
+This will include:
+
+* account creation
+* logging in and out
+* creating documents
+* publishing content
+* managing projects
+* various other features
+
+. Choose a source markup language for your primary writing.
++
+This challenge will include your first interrogative.
+You will choose between:
+
+* Markdown
+* AsciiDoc
+* reStructuredText
+* DITA
+
+. Set up a simple system for sensible, collaborative internal documentation.
++
+This will include the second interrogative, which is arguably also the toughest.
+You will choose between:
+
+* a cloud portal/intranet/filesystem
+* a web-based content management system (CMS)
+* a wiki
+* flat files in Git
+* a hybrid solution
+
+. Set up an integrated "changelog" for DocuMator.
++
+This means:
+
+* working with the developers to track the user-facing changes they make;
+* copy editing and formatting their notes into presentable shape;
+* integrating this source material into the documentation; and
+* making sure all release notes appear where and when they should.
+
+. Produce installation instructions for DocuMator Enterprise, the self-serve version of the SaaS product.
+
+.. Test and write up the installation procedure.
++
+You're old hat now, so writing up these instructions won't be a big deal.
+However, you'll want to reevaluate your approach given each new project's requirements.
+And in this case, you'll need to approach the source-info gathering process differently, since you're instructing
+
+* installation (not use)
+* to a different audience
+* for a different environment.
+
+.. Publish the DocuMator Enterprise installation guide in and HTML and PDF.
++
+This won't be a difficult objective, but knowing it is down the pike will inform prerequisite decisions.
+
+. Prepare to hire a second tech writer.
++
+This will mean taking some time to evaluate your documentation infrastructure.
+Is it ready to accommodate a newcomer?
+What is missing?
+How can you make it so they'll orientate and contribute rapidly?

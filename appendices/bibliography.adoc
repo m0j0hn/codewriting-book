@@ -1,0 +1,8 @@
+= Bibliography
+[bibliography]
+
+[[biblio-modern]]
+* Andrew Etter. _Modern Technical Writing: An Introduction to Software Documentation_, Kindle Edition. Self-published. 2016.
+
+[[biblio-leanpub]]
+* Peter Armstrong. _Lean Publishing_. http://leanpub.com/lean[Leanpub]. 2015.

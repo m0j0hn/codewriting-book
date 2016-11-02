@@ -1,0 +1,33 @@
+= Driving TechComm
+
+Leadership is sparse in this corner of the technical documentation field.
+There is quite a bit of irony in the lack of accessible documentation about how to do documentation right.
+When developers stepped out of their closed-source silos about 15 years ago, technical writers largely stayed behind.
+Those who have been doing it right the past _N_ years uncharacteristically seem to have failed to publicly document their successful strategies and tactics.
+
+If DocOps (perhaps under some better name) is to emerge as a movement or mindset, it will need to undergo rigorous field testing and evaluation.
+_Writing Code_ is one step in the development of a mature methodology for wrestling complicated software products into clusters of coherent descriptions and instructions.
+
+[TIP]
+Writing a book in a pubic repo is my attempt to nudge the field forward in its mindset.
+We're a bunch of grown ups used to corralling testy engineers and conjuring stale prose to earn a crust; of course we can collaborate with fellow pros to co-ghostwrite the user manual for the next-generation docs methodology.
+We should all be dying to do just that.
+
+== Add Value
+You might think I'm joking, but in truth, it would not be terribly hard to automate a huge portion of technical writing jobs without a major loss of quality.
+
+Maybe it has already crossed your mind that if we programatize the technical writing environment too much, and involve engineers too directly, might we as well just be signing our own pink slips?
+The writing is on the wall; we can either innovate and increase our value to the engineering and support organizations, or we can watch helplessly as they tool us out of work.
+
+Think about it: to the extent technical writers are copying/pasting, categorizing, styling, and testing engineers' notes and comments, we're talking processes ripe for automation.
+Engineers and capitalists would _love_ to recuperate those tech writer salaries and CCMS license fees.
+
+== Lighten Your Toolset
+
+One way to thwart this trend--to everyone's benefit, I might add--is to lighten the churn burden of documentation systems.
+
+== Sweeten the Docs with a Human Touch
+
+Another critical startegy is to increase the value of documentation by a profoundly human dimension and a uniquely strategic outlook on the role of documenting software products.
+
+Even if a bunch of geeks in a stealth engineering startup are right now coding some master API to end all need for human intervention in the docs process, there is a positive counterweight.

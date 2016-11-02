@@ -1,0 +1,34 @@
+= Writing (in) Code
+[abstract]
+Writing docs in dynamic markup, inside the product repo, using developers' tools.
+
+.DocOps Overview
+image::images/diagram-docops-detailed.png[]
+
+== Writing in Lightweight Markup
+
+You'll pretty much never see a serious software engineer _writing in_ tools that heavily abstract from the code.
+There are exceptions to this for complex code, such as formulas and algorithms, which are perhaps better generated automatically than every character written by hand.
+
+== Docs in Flat Files
+
+Another thing you won't find developers doing is keeping all their source code in a relational database.
+Typical packaged systems for content management (e.g., Wordpress), contact relationship management (e.g., Salesforce), and task management (e.g., JIRA) use RDB backends.
+This is for good reason, as the tools require levels of abstraction that eliminate most user choice.
+
+APIs make CMSes more interesting.
+
+IDEs are basically reverse content management systems for source code.
+An IDE is a code editor that is integrated with the software environment.
+An IDE "knows" not just the syntax of the language the developer is writing in (catching early generic syntax mistakes and typos);
+it is also configured to read variables from files outside the one you're in, as well as apply the rules of that language and environment dynamically.
+This helps you test and debug software as you write.
+
+Think of well-configured IDE as spelling and grammar checking on steroids.
+Unlike English, computer languages are strict enough that an IDE can give far more accurate insight into code than Word is able to provide.
+
+== Docs in the Product Codebase
+
+== Writing DRY Docs
+
+== Iterate the Dynamism of Your Docs

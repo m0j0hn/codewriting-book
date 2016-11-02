@@ -1,0 +1,3 @@
+= Overinstruct Everything
+[abstract]
+Finding a way to provide all the information a user may need without overburdening them with content.

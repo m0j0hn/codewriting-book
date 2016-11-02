@@ -1,0 +1,4 @@
+{% for item in site.data.bibliography %}
+[[{{ item.slug }}]]
+* _{{ item.title }}_, by {{ item.author.first }} {{ item.author.last }}. {{ item.publisher }}. {{ item.date }}.
+{% endfor %}

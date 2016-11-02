@@ -1,0 +1,16 @@
+= Glossary
+
+[glossary]
+DITA::
+Acronym for _Darwin Information Typing System_.
+An technical writing-oriented XML standard introduced by IBM in 2005.
+Pronounced _DII-tuh_.
+https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture[Wikipedia].
+
+GUI::
+Acronym for _graphical user interface_.
+Pronounced _GOO-ee_.
+
+UI::
+Initialism For _user interface_.
+Pronounced _U-I_.

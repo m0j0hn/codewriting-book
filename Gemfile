@@ -1,3 +1,6 @@
 source 'https://rubygems.org'
+gem 'jekyll', '~> 3.1'
 gem 'asciidoctor', '~> 1.5.0'
 gem 'asciidoctor-pdf'
+gem 'jekyll-asciidoc'
+gem 'jekyll-paginate'

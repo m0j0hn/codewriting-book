@@ -1,0 +1,9 @@
+= Audience and Delivery
+[abstract]
+Assess whether and how well you are reaching your audience.
+How effective is your delivery?
+How instructive is your content?
+
+== User Testing
+
+== Analytics

@@ -1,0 +1,12 @@
+= Part 5: Evolving
+
+[partintro]
+--
+In the final chapters of this book, we'll check in on the recesses of my mind, where I brew insights about innovative ways to improve technical documentation at my organizations.
+As with the rise of development frameworks and agile methodologies over the past 15 years, so too can technical documentation enjoy a comparable (if humbly proportionate) renaissance of flourishing methodologies and tooling strategies.
+Perhaps DocOps can ride engineering's coat tails into the new way of operating, or we can be left behind as engineers iterate their way to automating our roles entirely.
+
+
+I fully expect this document to be deprecated in favor of a superior version or alternative post haste; that is a _demand_.
+
+--

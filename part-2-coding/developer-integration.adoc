@@ -1,0 +1,22 @@
+= Developer Integration
+[abstract]
+Getting your engineers involved in thinking about DocOps, as well as directly contributing to docs can be a big win; just before to avoid pitfalls.
+
+Engineers are notoriously averse to writing documentation.
+Except the many who are not, and do a diligent job pretty much every time.
+That said, If you're taking an engineering approach to the docs, engineers may be more likely to approach the docs.
+
+== Getting Engineers to Write Docs
+
+== The Balance
+
+=== Too Many Cooks in the Kitchen
+
+== DocOps for non-Techwriters
+
+=== Tom Sawyer the Docs Platform
+
+Few engineers like technical writing of any kind, and fewer still want to actually document their own work.
+But if it looks like you're having fun putting together a documentation platform, they may grow interested in helping out.
+
+== Internal -> External Document Lifecycle

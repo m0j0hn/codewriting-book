@@ -1,0 +1,9 @@
+= Instructions Testing
+
+== Docs Have Bugs
+
+You should treat error reports about your docs--from typos to downright inaccurate information--just like developers treat software bugs.
+
+* Log them all in one place.
+* Track the time it takes to resolve them.
+* Trace the error back to its source.

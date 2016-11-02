@@ -5,9 +5,9 @@ This is an open, collaborative writing project to document current best practice
 == Build
 
 This book is being written in AsciiDoc.
-That means it starts as source code (in `.adoc`-appended files), and it must be compiled to a more readable format.
+That means it starts as source code (in files with the `.adoc` extension), and it must be compiled to a more readable format.
 
-Here is how to build a 1-page HTML document from the source, so you can read it in a proper format:
+Here is how to build a 1-page HTML document or a PDF booklet from the source, so you can read it in a proper format:
 
 . https://github.com/asciidoctor/asciidoctor#installation[Install Asciidoctor].
 
@@ -39,8 +39,9 @@ git clone https://github.com/briandominick/codewriting-book.git
 
 All proposed edits and addition are eagerly welcomed.
 All contributions will be reviewed.
-Only when we're both happy with the final state of a proposed change will I incorporate any of your work, and all contributors will be prominently credited, as well as remain in the git blame/history for all eternity.
+Only when we're both happy with the final state of a proposed change will I incorporate any of your work, and all contributors will be prominently credited, as well as remain in the git blame/log for all eternity.
+It's lucky I'm too lazy to integrate this with a blockchain platform to verify commits against a cryptocurrency ledger.
 
 I do reserve the right to include lessons from your contributions even if we cannot agree on the specific text; any specific ideas reflected will be duly credited.
 
-For full details, build the book and see the Appendix on "Collaborative Authorship".
+For full details, build the book and see <<collaborative-authorship>>.

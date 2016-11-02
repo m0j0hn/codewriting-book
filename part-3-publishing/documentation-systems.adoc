@@ -1,0 +1,11 @@
+= True DocOps
+[abstract]
+Making yourself useful to Product and Engineering by always being ready to solve a documentation problem (even imperfectly).
+
+== Solving Problems
+
+== Driving Results
+
+== Leading Content
+
+== Agility at Work

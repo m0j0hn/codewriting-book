@@ -1,18 +1,23 @@
-= Code Writing: DocOps for Agile Teams & Tech Writers
+= Code Writing: DocOps & Content Development for Agile Teams
 Brian Dominick <badominick@gmail.com>
 :includesdir: ./includes
+
+A manual for setting up optimal tech writing environments, _Code Writing_ explores the "docs-as-code" approach to software documentation.
+This iteratively written, open source book digs into the unconventional approach today's hottest startups (and even some industry stalwarts) are using to rethink technical communications.
 
 :toc: macro
 toc::[]
 
 
 //FRONT MATTER
-
+[[acknowledgements]]
 
 
 [[preface]]
 [preface]
 include::./preface.adoc[leveloffset=1]
+
+[[foreword]]
 
 [[introduction]]
 include::./introduction.adoc[leveloffset=1]
@@ -104,13 +109,13 @@ include::./part-5-evolving/open-source.adoc[leveloffset=1]
 
 
 //APPENDICES
+[glossary]
+[[glossary]]
+include::./appendices/glossary.adoc[leveloffset=1]
+
 [appendix]
 [[bibliography]]
 include::./appendices/bibliography.adoc[leveloffset=1]
-
-[[glossary]]
-[glossary]
-include::./appendices/glossary.adoc[leveloffset=1]
 
 [appendix]
 [[authorship-publishing]]

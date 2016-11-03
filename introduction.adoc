@@ -4,11 +4,29 @@ This project is my attempt to bridge a gap I straddle between the worlds of writ
 I have spent my career (over two decades) in and out of media and technology, almost always mixing the two in some way, even when mixing them has not been my primary role.
 
 What differentiates _Code Writing_ from other technical writing books is that it is solidly rooted in how today's best engineering teams operate.
-The wisdom of technical writers, documentation managers, and project managers from lean/agile organizations is infused into this new approach.
 
-DocOps parallels the field of "DevOps" (developer operations, engineers who specialize in making other engineers' work easier and more effective through tooling and automation).
-DocOps means hacking platforms to enable tech writers to be better at their jobs.
-To some extent this means better tooling, but it also means sensible collaboration and contribution policies, as well as a stable, predictable, and efficient workflow.
+Notice I said _engineering teams_, not documentation teams.
+The wisdom of developers and project managers from lean/agile backgrounds is infused into this new approach, as well as the experiences of technical writers and documentation managers in forward-thinking environments like the one I work in.
+
+My point is not even that conventional tech writing techniques do not yield good results.
+To their credit, lots of talented technical writers and documentation managers do excellent work with inferior strategies and tooling.
+The new methodology I expound upon in this group has meanwhile produced only a small minority of the truly great technical documentation projects of our time.
+My argument is simply that my approach and tools are better than the conventional industry standards, and that this partially makes up for my lack of experience in the field.
+All else being equal, a well-established "DocOps" system should produce "better" content--more accurate, more current, more appropriate, etc--than the conventional methods.
+
+Less controversial is my claim that a DocOps mentality will make you a better technologist.
+If you see yourself as "just a tech writer", maybe it is time to think again.
+
+* Maybe you are a documentation operator--someone who arranges optimal docs environments for herself and the PMs and engineers she works with, all using a lean-startup approach.
+
+* Maybe immersing yourself in the tools engineers use to accomplish their work--code editors, markup with includes, conditionals, and variables, Git repos, and build platforms--will reorient you regarding the development process.
+
+* Maybe working in the product codebase and tech writers participating in key engineering meetings will "promote docs to first-class citizenship", as my CTO Eric Sammer told me of the way he made docs central to the Engineering organization at Rocana.
+(That has been the result here, for sure.)
+
+* Or maybe you just need help articulating the case for a DocOps/docs-as-code approach you're already salivating over.
+
+If none of the above is true, this book may still contain valuable insights, but it won't stop trying to convince you to rethink technical documentation.
 
 == Objectives
 
@@ -16,7 +34,7 @@ After reading this book and engaging its exercises, you should be better able to
 
 * _describe software_ to users and _instruct_ them in its use;
 
-* _support engineers_ in communicating their product to its users;
+* _support engineers_ in more directly communicating their product to its users;
 
 * _establish systems_ for collaborative documentation using bleeding-edge open source tools and platforms;
 
@@ -26,12 +44,18 @@ After reading this book and engaging its exercises, you should be better able to
 
 * _convert legacy material_ to a future-compatible system; and
 
-* _‘codify’ your technical writing_ by thinking like an engineer while sharing the product codebase.
+* _‘codify’ your technical writing_ by thinking like a developer while sharing the product codebase.
 
-Truth be told, I am researching and writing this book so I can be a better technical writer.
-I believe the exercise of writing this book will improve my skills in all of the above categories, as well.
+Depending on your background, Some of these objectives may not even make sense.
+
+Truth be told, I am researching and writing this book so I can get better at what I do professionally.
+I currently have no tech writer peers at work.
+Although this has had the added benefit of forcing me to have esoteric conversations with engineers, I do from time to time want to talk about documentation with colleagues who live and breathe docs.
+
+I believe the exercise of writing this book will improve my skills in all of the above-listed objectives, which I already do well enough to instruct on.
+I will add more if I become proficient enough to teach lessons toward other objectives.
 I hope if you follow along with my experiment, you will learn with me.
-If you are moved to contribute and teach me directly, I will be grateful beyond words.
+If you are moved to contribute and teach me directly, I will be grateful beyond words, though words are all I have to offer.
 
 == Open Source Centricity
 I love open source.
@@ -67,30 +91,30 @@ Open source means security::
 The most important reason you should favor and engage with open source solutions is that most of the best engineers are open source enthusiasts, if not devotees.
 Not only does this suggest there is something to the phenomenon, but it means you'll need to appreciate and get comfortable with open source if you want to earn the respect of the most discerning engineers you may work with.
 
-== Platform Thinking
+== Platform Thinking (and Building)
 
 Platforms mean _distributed power_, and distributed power is key to comprehensive documentation, especially in agile environments.
 If you want to be successful in producing documentation for ever-changing software products, you'll need a platform solution.
-This book will help you think through the various options, including hybrid platforms that will scratch various itches coherently with a little finessing up front.
+It may not come in a box.
+This book will help you think through the various options, including hybrid platforms that will scratch various itches coherently with a bit of hacking up front.
 
-== "Everything in Code"
+== Docs as Code
 
-This maxim has a dual meaning.
-First, all technical writing should be written in markup.
-This book also favors writing directly in markup, as opposed to using an abstraction tool backed by XML, such as Word, Google Docs, clients like oXygen, or your content management system's WYSIWYG UI.
+The maxim _everything in code_ has a dual meaning.
+
+First, all technical writing should be written in markup and compiled to rich output like HTML and PDF.
+This book also favors writing directly in markup, as opposed to using a visualization tool that's generating XML in the background, such as Word, Google Docs, clients like oXygen (over DITA or Docbook), or your content management system's WYSIWYG UI.
 The case for this is developed in <<writing-in-code>>.
 
-Second, put the docs in the product codebase.
+Second, _everything in code_ means put the docs in the product codebase--not in a database, not in a separate repo.
 We'll discuss iteratively integrating your documentation source and platform into the repo and the product itself.
-This is addressed in
+This is addressed in <<developer-integration>>.
 
 .DocOps -- General Concept
 image::images/diagram-docops-general.png[]
 
-== Content _Development_
-
-You're not thinking like a developer until you look at your writing as _content development_.
-There's no need to claim you write software.
+There are several reasons I love the docs-as-code approach, but the key advantages are the flexibility allows on both ends: in put and output.
+Lots of people in different roles can readily contribute.
 
 == Lean Docs for Lean Projects
 

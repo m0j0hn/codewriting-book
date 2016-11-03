@@ -2,5 +2,5 @@
 
 [partintro]
 --
-
+DocOps is about maximizing variety on both ends of the content continuum: diverse input from an array of content authors, as well as with a narrow middle, in which source
 --

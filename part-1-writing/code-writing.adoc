@@ -1,3 +1,182 @@
 = Code Writing
 [abstract]
 The different "codes" we use to communicate technical concepts.
+
+== Code is Everywhere
+
+Unless you can read binary code (you cannot), it does not matter how great of a software engineer you may be: you require code abstraction in order to do your work.
+Even if you make a product for software developers, they want an effective UI or API that they can work with.
+You say all you're giving them is a Linux command-line tool?
+That is a layer of abstraction--it keeps them from having to write and run scripts every time they want to interact with your product.
+In fact, any good user interface filters out all the non-essential options and shows users just what they might need from where they stand.
+
+Good documentation is another layer of abstraction added to the product it covers.
+It gives users (and potential customers) a view of the product that uses text (and hopefully images) to abstract all of that software.
+If documentation is part of the product, you are acting like a developer every time you make a contribution.
+
+== Tech Writers Are Contributors
+
+Maybe you haven't looked at your work that way in the past.
+Especially in the open source community, but really now throughout the broader software engineering field, developers tend to think in terms of making "commits" to projects.
+You'll see open source participants referred to as "contributors"--usually including tech writers, if there are any.
+
+I suspect this stems partly from the literal sense in which contributors are usually making literal "commits" to the product.
+In perhaps most cases today, technical writers do not even use Git or another source-control tool, let alone are they working in the product repo.
+This book will try to convince you and your coworkers to change all of that, but that can take time.
+For now it's more important to change mindsets.
+Docs are part of the product, and tech writers are contributors--this is true even if they work exclusively in a Wiki or a conventional CMS.
+
+== Subject-oriented Writing
+
+You've at least heard of "object oriented", right?
+It's a general category of the way a programming language/framework is structured around acting on data objects, as well as the approach to developing software in that environment.
+Taking a step back to look at development in general
+
+Writers have a much harder task.
+We aren't writing code to act on objects inside a closed system.
+Very few of our sentences will throw syntax errors that require us to rewrite if we wish to proceed with publishing our docs.
+Unlike an operating system or a remote API, if our audience of _real humans_ cannot make use of our part of the product, they will not throw a graceful error.
+
+Subject-oriented writing is not what it may sound like.
+I'm using _subject_ as the opposite of _object_.
+If your audience is people, you cannot treat them as objects.
+They are extremely complicated, meat-based computers that do not necessarily appreciate your language let alone your syntax.
+In fact, users may reject your medium before they even give your strategy a chance.
+("I learn experientially; manuals are just for reference, at most.")
+
+You can blame the audience all you want, but the truth is, we write material pretty much nobody truly wants to read.
+The programmer never has to wonder this about her immediate audience, beause it isn't meat; if the computer speaks a language she can write, she never has to wonder if it will be uninterested in compiling and running her software.
+She worries not one whit about the meat-based end-user caring about the code she writes, so long as it abstracts nicely into functionality or design or the immersive environment expected by some gamer.
+She does not have to name objects cleverly, and she sure as hell shouldn't have to restate anything in her final source in order for the computer to "get it".
+
+== Yes, Text Can Be Harder Than Code
+
+It's rarely harder to _format_ the most complex concept in text than it is to do just about anything complicated in code.
+Also rare is the case that someone who can code good software is somehow unable to string English words together coherently, at least in their native tongue (though I have seen this).
+Nevertheless, making a user manual _work_ as well as the software it accompanies can be at least as challenging as making the software itself.
+The difference is, people tend to overlook bad documentation if the product is good; in fact, as well all know, a great product can reduce or eliminate the need for good docs.
+Docs can make up for poor products, but seemingly at least as often we find docs simply fall short on their own
+
+And technical writers often get away with this classic _You had one job…_ scenario.
+If you know a tech writer who says her job is easy, you probably know someone who is simply unchallenged at work.
+Failing without anybody noticing is not the same as succeeding, even if it pays the same.
+Exemplary technical documentation results from mindfulness of process and constantly addressing pain points and bottlenecks along the chain.
+Whomever finds such a thing "easy" should have written this book in their spare time by now, saving me the trouble;
+I have found the job anything but.
+
+Throughout this book, we'll highlight some of the reasons for the quality divergence between a given product's source code and documentation, but one of the key factors is this difference in audience.
+If you're a developer trying to correct the way you're instructing software to behave, you get immediate feedback on critical errors as you write; your audience is specially crafted to cry out when you screw up.
+In fact, the developer takes great care to maintain an environment tailored to surfacing problems before anyone from QA gets their hands on the outcome.
+
+Meanwhile, with even the best writing tools, there is no automated feedback mechanism that will flag a statement that disagrees with reality.
+
+Bugs in code have the distinct advantage of looking like bugs in the product.
+Bugs suck, but at least they tend be known entities.
+
+Not so with writing tools.
+Text editors and word processors have no idea about your context.
+They don't know if you're writing about a fantastical land or a tangible product; they certainly don't get what is the meaning of the code developers write, let alone its compiled product.
+In order to
+
+.Dev vs Docs: the Environmental Advantage
+****
+When we discuss the concept of "DocOps", we'll delve farther into this analogy, but for now consider the tools developers have made available for themselves.
+
+Programmers use IDEs, which are code editors that live in the context of their programming environments.
+An IDE is basically testing the product in real time, even as the developer works her magic.
+
+By contrast, even the best text editors only give sentence-level insight on spelling or grammar.
+We have to guess how it will be received by the reader.
+
+I don't mean to exaggerate the power of the programmer's IDE, either; it definitely does not tell her if her software will do what the user expects.
+But in a properly configured environment, the programmer has a lot of advantages when it comes to finding bugs before they ship, and even that
+
+This parallel is a good illustration of the opportunities ahead for thinking in a DocOps mindset.
+When will tech writers have what we need to predict how our work will be used and received?
+****
+
+An unforgiving but immediately responsive silicone audience is far and away more desirable than any meat-based audience; the latter are sure to be fickle, distant, even ornery.
+Your organically eyeballed reader will move on with life; a REST API will wait an eternity for a developer to send a properly formatted request.
+Don't let the coders you're surrounded by convince you otherwise.
+They think the reason you exist is that their time is more valuable spent writing in programming languages.
+Prove you're there to abstract their sparsely commented code and poor English notes into a more "human-readable format"; that should shut them up.
+
+[TIP]
+The programmer's dirty secret is that she may spend innumerable hours setting up the IDE and broader dev environment, but eventually teams figure out the best environments and standardize their setup, automating and preconfiguring as much as possible.
+You can help with this.
+*Development environment setup* should be fully and effectively documented for new hires, as well as to establish a standard for existing developers reference and to work toward.
+
+We will also discuss communicating with users in other sections of this book.
+What we need to appreciate about users for now is the similarity between writing code without any docs, on one hand, and writing documentation without understanding users' expectations.
+Most unfortunately, human audiences don't come with APIs.
+
+== Content Development
+
+You're not thinking like a developer until you look at technical writing as _content development_.
+This isn't the same as writing software; it's more like coding prose.
+The methodology is what counts, and content development is an approach that incorporates
+
+== Seeing Code Everywhere
+
+
+
+== Way Beyond Code
+
+[CAUTION]
+If tech writers only write and think in code, we're setting ourselves up to be automated.
+
+We will discuss the above described threat much further in <<part-5-evolution>>, but I wanted to secure your attention.
+Truthfully, I am pretty confident that I'm helping to build a technical documentation infrastructure that may make it trivial for writing bots (coded by real engineers, mind you) to do a tremendous amount of our work for us.
+
+[.knowreally]
+[NOTE]
+If you think I am exaggerating, look at what Watson is already able to do just by using the pixels on the screen and using trial and error to figure out the rules of the game.
+Nobody tells Watson how to play, and Watson is given no insight into the game's code.
+Watson figures out how fairly complicated interfaces work _without the docs_; how far is Watson from being able to _write the docs_?
+
+Part Five delves into the question of where you want to be standing when tech writing is ultimately automated; in this chapter, we are concerned with learning to read the user in ways no bot will be able to.
+The kind of feedback a screen-viewing, trying-and-erring bot like Watson will provide will be of incalculable value to GUI developers.
+If while using Watson to find bugs in gameplay or dead ends in a UI, some smart-ass engineer decides to hit btn:[print] and have Watson spill its observations into text, this sweet gig gets an expiration date.
+
+[.cycnicalprick]
+[NOTE]
+Our employers are looking to get surplus value out of us; they have to believe our boring little manuals will make them significantly more money than plying us with cash, health care, and t-shirts will cost them.
+They pay us for our minds' ability to ingest and process information, as well as our fingers' ability to pass that information back in.
+The rest--that bag of pulsating meat that requires food, shelter, medicine, and entertainment, and who is constantly showing dog/kid photos in the break room--that stuff our bosses merely tolerate.
+
+The good news is, what makes a tech writer human is actually valuable to users, and thus valuable to our organizations.
+Computers are a ways off from writing _interesting_ docs.
+When the bots come for those who excel at compiling reference guides, you will have long since climbed to the higher ground of scenario-based documentation.
+When the bots lay off everyone who writes use-cases, you'll be safely making diagrams and constructing relatable example screenshots.
+And when they come for the illustrators, you will be the one who gets why the user wants the software in the first place.
+
+== User Manual
+
+Another theme woven throughout this book is the idea that the tech writer's value is in her _insights_.
+Anyone can write down the steps to do something; the hard part of our job is not describing the technology and its use in a way we can later defend is technically "correct".
+The hard part of our job is bridging the gap between user's expectations and and the product.
+We make the product make sense where it is unintuitive, and we expose relevance at every stage.
+
+Tech writers answer _why_.
+
+[TIP]
+--
+.You're still thinking about a robot taking your job, aren't you?
+If you have not already skipped ahead to Part Five, you are at least distracted by what must have felt like my unexpected forecast of your professional demise.
+Perhaps you are discomforted by the irony, falling victim to some open-source platform this book convinced you to contribute to.
+Maybe it's the _tick-tock_ effect of some AI engine iterating off in the distance somewhere, whirling closer and closer
+Or maybe it's the eerie expectation of one day googling a tech writing tool and finding the landing page of some startup promising three steps to integrating their tech-writing API into your company's favorite build tool.
+When you discover the automation guys have a private repo called `techwriter-killer-gradle-plugin`, you fully expect to curse my name.
+
+Please try not to worry.
+Part Five is actually quite optimistic.
+If you're reading this, there is an excellent chance you will survive the robot apocalypse.
+Now, I need you to pay attention to this one last part.
+
+--
+
+Documentation development is the reverse User Manual.
+It is that API to the end user, your audience.
+DD is a framework for lean documentation development; it provides a basic approach to assessing the gap between your product and its users.
+
+The journey to establishing your User Manual starts with becoming the ultimate user.
